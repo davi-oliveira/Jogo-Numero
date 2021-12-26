@@ -49,7 +49,10 @@ var dicas = ""
 
 function apostarNumero(number){
     if(number <= 0 || number > 60){
-        alert('Informe um número válido')
+        alert('Informe um número válido (Entre 0 e 60)')
+        document.getElementById("numero").focus()
+        document.getElementById("numero").value = ""
+        return 1;
     }
 
     if(number == VALOR_SORTEADO){
